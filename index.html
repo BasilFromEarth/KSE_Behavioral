@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Redirect</title>
+    <script type="text/javascript">
+      // Function to randomly select a URL from the array
+      function randomRedirect() {
+        var urls = [
+          "https://forms.gle/6bBBFAYuw5TuPsBX6",
+          "https://forms.gle/L5xwKAxxiKymhkD17",
+          "https://forms.gle/ACzLQ5fZbvNLpLPXA",
+          "https://forms.gle/1JAYGDXLVpN7KUPk7"
+        ];
+        var randomIndex = Math.floor(Math.random() * urls.length);
+        var randomUrl = urls[randomIndex];
+
+        // Attempt to open the URL in a new tab
+        window.open(randomUrl, '_blank');
+      }
+
+      // Automatically call the function when the page loads.
+      window.onload = randomRedirect;
+    </script>
+  </head>
+  <body>
+    <noscript>You need JavaScript enabled to use this page.</noscript>
+    <!-- Fallback clickable link in case auto-redirect is blocked -->
+    <p>If the automatic redirect doesn't work, please 
+       <a href="#" onclick="randomRedirect(); return false;">click here</a>.
+    </p>
+  </body>
+</html>
